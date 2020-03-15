@@ -8,3 +8,4 @@ C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.BLL\
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.BLL\obj\Debug\ProjetoLoja.BLL.csproj.CopyComplete
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.BLL\obj\Debug\ProjetoLoja.BLL.dll
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.BLL\obj\Debug\ProjetoLoja.BLL.pdb
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.BLL\bin\Debug\ProjetoLoja.DTO.dll.config
