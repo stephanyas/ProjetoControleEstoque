@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace ProjetoLoja.UI
 {
-    public partial class Form1 : Form
+    public partial class MDIPrincipal : Form
     {
-        public Form1()
+        private int childFormNumber = 0;
+
+        public MDIPrincipal()
         {
             InitializeComponent();
         }
+
+        
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DTO\bin\Debug\ProjetoLoja.DTO.dll
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DTO\bin\Debug\ProjetoLoja.DTO.pdb
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DTO\obj\Debug\ProjetoLoja.DTO.csprojAssemblyReference.cache
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DTO\obj\Debug\ProjetoLoja.DTO.dll
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DTO\obj\Debug\ProjetoLoja.DTO.pdb
