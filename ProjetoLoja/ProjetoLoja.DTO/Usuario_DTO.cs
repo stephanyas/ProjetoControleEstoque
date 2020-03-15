@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoLoja.BLL
+namespace ProjetoLoja.DTO
 {
-    public class Class1
+    class Usuario_DTO
     {
     }
 }
