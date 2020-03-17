@@ -52,6 +52,18 @@
     <Compile Include="CadastroUsuario.Designer.cs">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControleUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleUsuario.Designer.cs">
+      <DependentUpon>ControleUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CadastroUsuario.resx">
       <DependentUpon>CadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleUsuario.resx">
+      <DependentUpon>ControleUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.cs</DependentUpon>

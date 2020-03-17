@@ -14,3 +14,5 @@ C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\o
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.pdb
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\bin\Debug\ProjetoLoja.DTO.dll.config
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.CadastroUsuario.resources
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.EditarUsuario.resources
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.ControleUsuario.resources

@@ -84,6 +84,7 @@
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // Estoque
             // 
@@ -149,6 +150,7 @@
             this.editarUsuárioToolStripMenuItem.Name = "editarUsuárioToolStripMenuItem";
             this.editarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarUsuárioToolStripMenuItem.Text = "Editar Usuário";
+            this.editarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuárioToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 

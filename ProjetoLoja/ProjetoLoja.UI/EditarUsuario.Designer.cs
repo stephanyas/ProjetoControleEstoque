@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLoja.UI
 {
-    partial class CadastroUsuario
+    partial class EditarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -34,23 +34,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 33);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(45, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 22);
+            this.label1.Size = new System.Drawing.Size(142, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de Usuario";
+            this.label1.Text = "Editar Usuario";
             // 
-            // CadastroUsuario
+            // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 253);
+            this.ClientSize = new System.Drawing.Size(384, 268);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "CadastroUsuario";
-            this.Text = "CadastroUsuario";
+            this.Name = "EditarUsuario";
+            this.Text = "EditarUsuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 
