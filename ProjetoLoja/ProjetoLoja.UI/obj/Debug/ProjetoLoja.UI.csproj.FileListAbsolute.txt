@@ -6,10 +6,10 @@ C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\b
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\bin\Debug\ProjetoLoja.BLL.pdb
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\bin\Debug\ProjetoLoja.DTO.pdb
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.csprojAssemblyReference.cache
-C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.MDIPrincipal.resources
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.Properties.Resources.resources
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.csproj.GenerateResource.cache
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.csproj.CopyComplete
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.exe
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.pdb
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\bin\Debug\ProjetoLoja.DTO.dll.config
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.UI\obj\Debug\ProjetoLoja.UI.ControlePrincipal.resources
