@@ -19,37 +19,89 @@ namespace ProjetoLoja.UI
             InitializeComponent();
         }
 
-        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowNewForm(object sender, EventArgs e)
         {
-            /*Chamada do form CadastroUsuario no formato de MDI 
-             ou seja para aprir dentro do Controle principal
-             chama-se janela filha, que fica dentro da janela mãe*/
-
-            Form childForm = new ControleUsuario();
+            Form childForm = new Form();
             childForm.MdiParent = this;
+            childForm.Text = "Window " + childFormNumber++;
             childForm.Show();
         }
 
-        private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenFile(object sender, EventArgs e)
         {
-            /*Chamada do form CadastroUsuario no formato de MDI 
-              ou seja para aprir dentro do Controle principal
-              chama-se janela filha, que fica dentro da janela mãe*/
-
-            Form childForm = new CadastroUsuario();
-            childForm.MdiParent = this;
-            childForm.Show();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                string FileName = openFileDialog.FileName;
+            }
         }
 
-        private void editarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Chamada do form CadastroUsuario no formato de MDI 
-              ou seja para aprir dentro do Controle principal
-              chama-se janela filha, que fica dentro da janela mãe*/
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                string FileName = saveFileDialog.FileName;
+            }
+        }
 
-            Form childForm = new EditarUsuario();
-            childForm.MdiParent = this;
-            childForm.Show();
-        }       
+        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+        }
+
+        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+        }
+
+        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
     }
 }
