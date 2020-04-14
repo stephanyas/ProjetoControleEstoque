@@ -52,7 +52,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Usuario_DTO.cs" />
+    <Compile Include="UsuarioDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoLoja.DTO
 {
-    public class Usuario_DTO
+    public class UsuarioDTO
     {
         //Nesta classe DTO temos os atributos dos objetos
         //Public para que ele seja acessivel externamente

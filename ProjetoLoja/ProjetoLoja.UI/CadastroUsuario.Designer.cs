@@ -237,6 +237,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CadastroUsuario";
             this.Text = "CadastroUsuario";
+            this.Load += new System.EventHandler(this.CadastroUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleCadastro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
