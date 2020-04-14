@@ -128,7 +128,7 @@
             this.lblPerfilUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPerfilUsuario.AutoSize = true;
             this.lblPerfilUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfilUsuario.Location = new System.Drawing.Point(273, 261);
+            this.lblPerfilUsuario.Location = new System.Drawing.Point(290, 262);
             this.lblPerfilUsuario.Name = "lblPerfilUsuario";
             this.lblPerfilUsuario.Size = new System.Drawing.Size(40, 17);
             this.lblPerfilUsuario.TabIndex = 7;
@@ -187,9 +187,9 @@
             "Administrador",
             "Operador",
             "Gerencial"});
-            this.cboSituacaoUsuario.Location = new System.Drawing.Point(315, 258);
+            this.cboSituacaoUsuario.Location = new System.Drawing.Point(116, 259);
             this.cboSituacaoUsuario.Name = "cboSituacaoUsuario";
-            this.cboSituacaoUsuario.Size = new System.Drawing.Size(171, 24);
+            this.cboSituacaoUsuario.Size = new System.Drawing.Size(138, 24);
             this.cboSituacaoUsuario.TabIndex = 13;
             // 
             // cboPerfilUsuario
@@ -199,7 +199,7 @@
             this.cboPerfilUsuario.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.cboPerfilUsuario.Location = new System.Drawing.Point(115, 258);
+            this.cboPerfilUsuario.Location = new System.Drawing.Point(332, 259);
             this.cboPerfilUsuario.Name = "cboPerfilUsuario";
             this.cboPerfilUsuario.Size = new System.Drawing.Size(148, 24);
             this.cboPerfilUsuario.TabIndex = 14;
@@ -209,8 +209,11 @@
             this.dgvControleCadastro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvControleCadastro.Location = new System.Drawing.Point(51, 342);
             this.dgvControleCadastro.Name = "dgvControleCadastro";
+            this.dgvControleCadastro.ReadOnly = true;
+            this.dgvControleCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvControleCadastro.Size = new System.Drawing.Size(435, 150);
             this.dgvControleCadastro.TabIndex = 15;
+            this.dgvControleCadastro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvControleCadastro_CellClick);
             // 
             // CadastroUsuario
             // 
