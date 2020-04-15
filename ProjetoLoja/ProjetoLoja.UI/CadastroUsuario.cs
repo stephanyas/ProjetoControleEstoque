@@ -24,6 +24,12 @@ namespace ProjetoLoja.UI
 
         private void CadastroUsuario_Load(object sender, EventArgs e)
         {
+            //Metodo CarregarGrid
+            carregarGrid();
+        }
+
+        private void carregarGrid()
+        {
             try
             {
                 IList<UsuarioDTO> listUsuarioDTO = new List<UsuarioDTO>();
@@ -32,7 +38,7 @@ namespace ProjetoLoja.UI
                 //Preencher dados do GridView
                 dgvControleCadastro.DataSource = listUsuarioDTO;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -51,17 +57,17 @@ namespace ProjetoLoja.UI
             txtCadastroUsuario.Text = Convert.ToString(dgvControleCadastro["CadastroUsuario", selecionado].Value);
 
             //Condição se a situação for igual a A então o combo ficara ativo se não inativo
-            if(Convert.ToString(dgvControleCadastro["SituacaoUsuario", selecionado].Value) == "A")
+            if (Convert.ToString(dgvControleCadastro["SituacaoUsuario", selecionado].Value) == "A")
             {
                 cboSituacaoUsuario.Text = "Ativo";
             }
             else
             {
-                cboSituacaoUsuario.Text = "Inativo";                
+                cboSituacaoUsuario.Text = "Inativo";
             }
 
             //Definindo o perfil usuario com o switch
-            switch(Convert.ToString(dgvControleCadastro["PerfilUsuario", selecionado].Value))
+            switch (Convert.ToString(dgvControleCadastro["PerfilUsuario", selecionado].Value))
             {
                 case "1":
                     cboPerfilUsuario.Text = "Administrador";
@@ -98,5 +104,75 @@ namespace ProjetoLoja.UI
             //Apos clicar no botão novo, aciona a variavel modo passa a ser novo incluindo um registro
             modo = "novo";
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            modo = "altera";
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (modo == "novo")
+            {
+                try
+                {
+                    //Método insere usuário na classe UsuarioBLL
+                    //Objeto usuario
+                    UsuarioDTO usuario = new UsuarioDTO();
+                    usuario.NomeUsuario = txtNomeUsuario.Text;
+                    usuario.EmailUsuario = txtEmailUsuario.Text;
+                    usuario.LoginUsuario = txtLoginUsuario.Text;
+                    usuario.SenhaUsuario = txtSenhaUsuario.Text;
+                    usuario.CadastroUsuario = System.DateTime.Now;
+
+                    if (cboSituacaoUsuario.Text == "Ativo")
+                    {
+                        usuario.SituacaoUsuario = "A";
+                    }
+                    else
+                    {
+                        usuario.SituacaoUsuario = "I";
+                    }
+
+                    switch (cboPerfilUsuario.Text)
+                    {
+                        case "Administrador":
+                            usuario.PerfilUsuario = 1;
+                            break;
+                        case "Operador":
+                            usuario.PerfilUsuario = 2;
+                            break;
+                        case "Gerencial":
+                            usuario.PerfilUsuario = 3;
+                            break;
+                    }
+
+                    //Metodo insereUsuario na classe UsuarioBLL
+                    int novoUsuario = new UsuarioBLL().insereUsuario(usuario);
+                    if (novoUsuario > 0)
+                        MessageBox.Show("Gravado com Sucesso!");
+
+                    //Recarrega o grid
+                    carregarGrid();
+
+                    //Limpa os campos
+                    limparCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro inesperado" + ex.Message);
+                }
+            }
+
+            modo = "";
+        }
+
+       
     }
 }

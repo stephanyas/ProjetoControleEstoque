@@ -25,5 +25,20 @@ namespace ProjetoLoja.BLL
                 throw ex;
             }
         }
+
+        public int insereUsuario( UsuarioDTO usuario)
+        {
+            //Insere usuario criado na DAL
+            try
+            {
+                return new UsuarioDAL().insereUsuario(usuario);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

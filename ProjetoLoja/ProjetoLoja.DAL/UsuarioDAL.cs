@@ -10,10 +10,9 @@ namespace ProjetoLoja.DAL
 {
     public class UsuarioDAL
     {
-        /*
-         Metodo carregarUsuario, retorna uma lista de objetos UsuarioDTO
-         */
-         public IList<UsuarioDTO> carregarUsuario()
+
+        //Metodo carregarUsuario, retorna uma lista de objetos UsuarioDTO         
+        public IList<UsuarioDTO> carregarUsuario()
         {
             try
             {
@@ -53,6 +52,39 @@ namespace ProjetoLoja.DAL
                     }
                 }
                 return listUsuarioDTO;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Metodo para inserir um novo usuario ao BD
+        public int insereUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+                //Conexão com o banco de dados
+                //Inserindo dados na tabela Usuario
+                SqlConnection CON = new SqlConnection();
+                CON.ConnectionString = Properties.Settings.Default.CST;
+                SqlCommand CM = new SqlCommand();
+                CM.CommandType = System.Data.CommandType.Text;
+                CM.CommandText = "INSERT INTO Usuario (NomeUsuario, LoginUsuario, SenhaUsuario, EmailUsuario, CadastroUsuario, SituacaoUsuario, PerfilUsuario)" +
+                    "VALUES (@NomeUsuario, @LoginUsuario, @SenhaUsuario, @EmailUsuario, @CadastroUsuario, @SituacaoUsuario, @PerfilUsuario)";
+                //Parameters vai substituir os valores dentro do campo
+                CM.Parameters.Add("NomeUsuario", System.Data.SqlDbType.VarChar).Value = usuario.NomeUsuario;
+                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;                
+                CM.Parameters.Add("SenhaUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SenhaUsuario;
+                CM.Parameters.Add("EmailUsuario", System.Data.SqlDbType.VarChar).Value = usuario.EmailUsuario;
+                CM.Parameters.Add("CadastroUsuario", System.Data.SqlDbType.DateTime).Value = usuario.CadastroUsuario;
+                CM.Parameters.Add("SituacaoUsuario", System.Data.SqlDbType.NVarChar).Value = usuario.SituacaoUsuario;
+                CM.Parameters.Add("PerfilUsuario", System.Data.SqlDbType.Int).Value = usuario.PerfilUsuario;
+                CM.Connection = CON;
+
+                CON.Open();
+                int quantidade = CM.ExecuteNonQuery();
+                return quantidade;
             }
             catch(Exception ex)
             {

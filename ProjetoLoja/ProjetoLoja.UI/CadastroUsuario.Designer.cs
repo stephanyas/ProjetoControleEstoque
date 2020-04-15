@@ -48,7 +48,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleCadastro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,6 +246,7 @@
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnDeletar
             // 
@@ -258,30 +259,32 @@
             this.btnDeletar.TabIndex = 18;
             this.btnDeletar.Text = "DELETAR";
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Thistle;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(319, 530);
+            this.btnCancelar.Location = new System.Drawing.Point(429, 530);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 35);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnConfirmar
+            // btnSalvar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.Thistle;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(420, 530);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(104, 35);
-            this.btnConfirmar.TabIndex = 20;
-            this.btnConfirmar.Text = "CONFIRMAR";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnSalvar.BackColor = System.Drawing.Color.Thistle;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(319, 530);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(104, 35);
+            this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // CadastroUsuario
             // 
@@ -291,7 +294,7 @@
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(544, 641);
             this.ControlBox = false;
-            this.Controls.Add(this.btnConfirmar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnEditar);
@@ -351,6 +354,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }
