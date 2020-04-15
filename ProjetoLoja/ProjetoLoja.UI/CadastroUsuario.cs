@@ -14,6 +14,9 @@ namespace ProjetoLoja.UI
 {
     public partial class CadastroUsuario : Form
     {
+        //Acionando um dos botoes esta variavel vai registrar e acionar o modo selecionado
+        string modo = "";
+
         public CadastroUsuario()
         {
             InitializeComponent();
@@ -70,6 +73,30 @@ namespace ProjetoLoja.UI
                     cboPerfilUsuario.Text = "Gerencial";
                     break;
             }
+        }
+
+        //Metodo para limpar os campos
+        private void limparCampos()
+        {
+            txtNomeUsuario.Text = "";
+            txtEmailUsuario.Text = "";
+            txtLoginUsuario.Text = "";
+            txtSenhaUsuario.Text = "";
+            txtCadastroUsuario.Text = "";
+            cboPerfilUsuario.Text = "";
+            cboSituacaoUsuario.Text = "";
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            //Chamando método Limpar campos que foi criado
+            limparCampos();
+
+            //Inserindo data atual automaticamente no txtCadastroUsuario
+            txtCadastroUsuario.Text = Convert.ToString(System.DateTime.Now);
+
+            //Apos clicar no botão novo, aciona a variavel modo passa a ser novo incluindo um registro
+            modo = "novo";
         }
     }
 }
