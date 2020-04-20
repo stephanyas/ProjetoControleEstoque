@@ -74,7 +74,7 @@ namespace ProjetoLoja.DAL
                     "VALUES (@NomeUsuario, @LoginUsuario, @SenhaUsuario, @EmailUsuario, @CadastroUsuario, @SituacaoUsuario, @PerfilUsuario)";
                 //Parameters vai substituir os valores dentro do campo
                 CM.Parameters.Add("NomeUsuario", System.Data.SqlDbType.VarChar).Value = usuario.NomeUsuario;
-                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;                
+                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;
                 CM.Parameters.Add("SenhaUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SenhaUsuario;
                 CM.Parameters.Add("EmailUsuario", System.Data.SqlDbType.VarChar).Value = usuario.EmailUsuario;
                 CM.Parameters.Add("CadastroUsuario", System.Data.SqlDbType.DateTime).Value = usuario.CadastroUsuario;
@@ -86,10 +86,47 @@ namespace ProjetoLoja.DAL
                 int quantidade = CM.ExecuteNonQuery();
                 return quantidade;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Metodo para editar um usuario ja existente
+        public int editarUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+                //Conexão com o banco de dados
+                //Inserindo dados na tabela Usuario
+                SqlConnection CON = new SqlConnection();
+                CON.ConnectionString = Properties.Settings.Default.CST;
+                SqlCommand CM = new SqlCommand();
+                CM.CommandType = System.Data.CommandType.Text;
+                CM.CommandText = "UPDATE Usuario SET NomeUsuario=@NomeUsuario," + "LoginUsuario=@LoginUsuario," + "SenhaUsuario=@SenhaUsuario," +
+                                 "EmailUsuario=@EmailUsuario," + "CadastroUsuario=@CadastroUsuario," + "SituacaoUsuario=@SituacaoUsuario," +
+                                 "PerfilUsuario=@PerfilUsuario)" + "WHERE IdUsuario=@IdUsuario";
+                //Parameters vai substituir os valores dentro do campo
+                CM.Parameters.Add("NomeUsuario", System.Data.SqlDbType.VarChar).Value = usuario.NomeUsuario;
+                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;
+                CM.Parameters.Add("SenhaUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SenhaUsuario;
+                CM.Parameters.Add("EmailUsuario", System.Data.SqlDbType.VarChar).Value = usuario.EmailUsuario;
+                CM.Parameters.Add("CadastroUsuario", System.Data.SqlDbType.DateTime).Value = usuario.CadastroUsuario;
+                CM.Parameters.Add("SituacaoUsuario", System.Data.SqlDbType.NVarChar).Value = usuario.SituacaoUsuario;
+                CM.Parameters.Add("PerfilUsuario", System.Data.SqlDbType.Int).Value = usuario.PerfilUsuario;
+                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.VarChar).Value = usuario.IdUsuario;
+                CM.Connection = CON;
+
+                CON.Open();
+                int quantidade = CM.ExecuteNonQuery();
+                return quantidade;
+            }
             catch(Exception ex)
             {
                 throw ex;
             }
         }
+
+
     }
 }
