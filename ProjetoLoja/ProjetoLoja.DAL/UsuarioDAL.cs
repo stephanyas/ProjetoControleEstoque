@@ -98,14 +98,14 @@ namespace ProjetoLoja.DAL
             try
             {
                 //Conexão com o banco de dados
-                //Inserindo dados na tabela Usuario
+                //Alterando os dados na tabela Usuario
                 SqlConnection CON = new SqlConnection();
                 CON.ConnectionString = Properties.Settings.Default.CST;
                 SqlCommand CM = new SqlCommand();
                 CM.CommandType = System.Data.CommandType.Text;
-                CM.CommandText = "UPDATE Usuario SET NomeUsuario=@NomeUsuario," + "LoginUsuario=@LoginUsuario," + "SenhaUsuario=@SenhaUsuario," +
-                                 "EmailUsuario=@EmailUsuario," + "CadastroUsuario=@CadastroUsuario," + "SituacaoUsuario=@SituacaoUsuario," +
-                                 "PerfilUsuario=@PerfilUsuario)" + "WHERE IdUsuario=@IdUsuario";
+                CM.CommandText = "UPDATE Usuario SET NomeUsuario = @NomeUsuario," + "LoginUsuario = @LoginUsuario," + "SenhaUsuario = @SenhaUsuario," +
+                                 "EmailUsuario = @EmailUsuario," + "CadastroUsuario = @CadastroUsuario," + "SituacaoUsuario = @SituacaoUsuario," +
+                                 "PerfilUsuario = @PerfilUsuario)" + "WHERE IdUsuario = @IdUsuario";
                 //Parameters vai substituir os valores dentro do campo
                 CM.Parameters.Add("NomeUsuario", System.Data.SqlDbType.VarChar).Value = usuario.NomeUsuario;
                 CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;
@@ -121,12 +121,38 @@ namespace ProjetoLoja.DAL
                 int quantidade = CM.ExecuteNonQuery();
                 return quantidade;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
         }
 
+        public int deletarUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+                //Conexão com o banco de dados
+                //Excluindo os dados na tabela Usuario
+                SqlConnection CON = new SqlConnection();
+                CON.ConnectionString = Properties.Settings.Default.CST;
+                SqlCommand CM = new SqlCommand();
+                CM.CommandType = System.Data.CommandType.Text;
+                CM.CommandText = "DELETE Usuario WHERE IdUsuario = @IdUsuario";
 
+                //Tem um unico parametro que sera o cpodigo usuario, só existe um           
+                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.VarChar).Value = usuario.IdUsuario;
+
+                CM.Connection = CON;
+
+                CON.Open();
+                //Retorna registro afetados
+                int quantidade = CM.ExecuteNonQuery();
+                return quantidade;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

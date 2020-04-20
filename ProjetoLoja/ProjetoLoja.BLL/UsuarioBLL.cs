@@ -39,6 +39,28 @@ namespace ProjetoLoja.BLL
             }
         }
 
+        public int editarUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+                return new UsuarioDAL().editarUsuario(usuario);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public int deletarUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+                return new UsuarioDAL().deletarUsuario(usuario);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
