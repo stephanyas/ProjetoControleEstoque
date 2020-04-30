@@ -103,18 +103,22 @@ namespace ProjetoLoja.DAL
                 CON.ConnectionString = Properties.Settings.Default.CST;
                 SqlCommand CM = new SqlCommand();
                 CM.CommandType = System.Data.CommandType.Text;
-                CM.CommandText = "UPDATE Usuario SET NomeUsuario = @NomeUsuario," + "LoginUsuario = @LoginUsuario," + "SenhaUsuario = @SenhaUsuario," +
-                                 "EmailUsuario = @EmailUsuario," + "CadastroUsuario = @CadastroUsuario," + "SituacaoUsuario = @SituacaoUsuario," +
-                                 "PerfilUsuario = @PerfilUsuario)" + "WHERE IdUsuario = @IdUsuario";
+                CM.CommandText = "UPDATE Usuario SET PerfilUsuario=@PerfilUsuario, " + "NomeUsuario=@NomeUsuario, " 
+                                                                                     + "LoginUsuario=@LoginUsuario, " 
+                                                                                     + "EmailUsuario=@EmailUsuario, " 
+                                                                                     + "SenhaUsuario=@SenhaUsuario, " 
+                                                                                     + "CadastroUsuario=@CadastroUsuario, " 
+                                                                                     + "SituacaoUsuario=@SituacaoUsuario " 
+                                                                                     + "WHERE IdUsuario=@IdUsuario";
                 //Parameters vai substituir os valores dentro do campo
+                CM.Parameters.Add("PerfilUsuario", System.Data.SqlDbType.Int).Value = usuario.PerfilUsuario; 
                 CM.Parameters.Add("NomeUsuario", System.Data.SqlDbType.VarChar).Value = usuario.NomeUsuario;
-                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario;
-                CM.Parameters.Add("SenhaUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SenhaUsuario;
-                CM.Parameters.Add("EmailUsuario", System.Data.SqlDbType.VarChar).Value = usuario.EmailUsuario;
-                CM.Parameters.Add("CadastroUsuario", System.Data.SqlDbType.DateTime).Value = usuario.CadastroUsuario;
-                CM.Parameters.Add("SituacaoUsuario", System.Data.SqlDbType.NVarChar).Value = usuario.SituacaoUsuario;
-                CM.Parameters.Add("PerfilUsuario", System.Data.SqlDbType.Int).Value = usuario.PerfilUsuario;
-                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.VarChar).Value = usuario.IdUsuario;
+                CM.Parameters.Add("LoginUsuario", System.Data.SqlDbType.VarChar).Value = usuario.LoginUsuario; 
+                CM.Parameters.Add("EmailUsuario", System.Data.SqlDbType.VarChar).Value = usuario.EmailUsuario; 
+                CM.Parameters.Add("SenhaUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SenhaUsuario; 
+                CM.Parameters.Add("CadastroUsuario", System.Data.SqlDbType.DateTime).Value = usuario.CadastroUsuario; 
+                CM.Parameters.Add("SituacaoUsuario", System.Data.SqlDbType.VarChar).Value = usuario.SituacaoUsuario; 
+                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.Int).Value = usuario.IdUsuario; 
                 CM.Connection = CON;
 
                 CON.Open();
@@ -140,7 +144,7 @@ namespace ProjetoLoja.DAL
                 CM.CommandText = "DELETE Usuario WHERE IdUsuario = @IdUsuario";
 
                 //Tem um unico parametro que sera o cpodigo usuario, só existe um           
-                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.VarChar).Value = usuario.IdUsuario;
+                CM.Parameters.Add("IdUsuario", System.Data.SqlDbType.Int).Value = usuario.IdUsuario;
 
                 CM.Connection = CON;
 

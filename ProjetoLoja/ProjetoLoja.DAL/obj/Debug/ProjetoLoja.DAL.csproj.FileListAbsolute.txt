@@ -8,3 +8,4 @@ C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DAL\
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DAL\obj\Debug\ProjetoLoja.DAL.pdb
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DAL\bin\Debug\ProjetoLoja.DTO.dll.config
 C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DAL\bin\Debug\ProjetoLoja.DAL.dll.config
+C:\Users\Stephany\Documents\Repositorio\ProjetoLoja\ProjetoLoja\ProjetoLoja.DAL\obj\Debug\ProjetoLoja.DAL.csproj.CoreCompileInputs.cache

@@ -16,6 +16,8 @@ namespace ProjetoLoja.UI
     {
         //Acionando um dos botoes esta variavel vai registrar e acionar o modo selecionado
         string modo = "";
+        //Selecionado
+        int idUsuarioSelecionado = -1;
 
         public CadastroUsuario()
         {
@@ -26,6 +28,7 @@ namespace ProjetoLoja.UI
         {
             //Metodo CarregarGrid
             carregarGrid();
+            lblMensagem.Text = "";
         }
 
         private void carregarGrid()
@@ -35,7 +38,7 @@ namespace ProjetoLoja.UI
                 IList<UsuarioDTO> listUsuarioDTO = new List<UsuarioDTO>();
                 listUsuarioDTO = new UsuarioBLL().carregarUsuario();
 
-                //Preencher dados do GridView
+                //Carrega os dados do GridView
                 dgvControleCadastro.DataSource = listUsuarioDTO;
             }
             catch (Exception ex)
@@ -44,6 +47,7 @@ namespace ProjetoLoja.UI
             }
         }
 
+        //Metodo que mostra os dados no gred para controle
         private void dgvControleCadastro_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Linha que estiver selecionada aparecerá nos campos
@@ -55,6 +59,7 @@ namespace ProjetoLoja.UI
             txtLoginUsuario.Text = Convert.ToString(dgvControleCadastro["LoginUsuario", selecionado].Value);
             txtSenhaUsuario.Text = Convert.ToString(dgvControleCadastro["SenhaUsuario", selecionado].Value);
             txtCadastroUsuario.Text = Convert.ToString(dgvControleCadastro["CadastroUsuario", selecionado].Value);
+            idUsuarioSelecionado = Convert.ToInt32(dgvControleCadastro["IdUsuario", selecionado].Value);
 
             //Condição se a situação for igual a A então o combo ficara ativo se não inativo
             if (Convert.ToString(dgvControleCadastro["SituacaoUsuario", selecionado].Value) == "A")
@@ -91,34 +96,44 @@ namespace ProjetoLoja.UI
             txtCadastroUsuario.Text = "";
             cboPerfilUsuario.Text = "";
             cboSituacaoUsuario.Text = "";
+            lblMensagem.Text = "";
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            //Chamando método Limpar campos que foi criado
-            limparCampos();
+            lblMensagem.Text = "Depois de adicionar os dados clique em SALVAR";
 
             //Inserindo data atual automaticamente no txtCadastroUsuario
             txtCadastroUsuario.Text = Convert.ToString(System.DateTime.Now);
 
             //Apos clicar no botão novo, aciona a variavel modo passa a ser novo incluindo um registro
-            modo = "novo";
+            modo = "novoUsuario";
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            modo = "altera";
+            lblMensagem.Text = "Selecione um usuário para EDITAR, depois de editado clique em SALVAR";
 
+            modo = "editarUsuario";
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
+            lblMensagem.Text = "Selecione um usuário para EXCLUIR, depois de editado clique em SALVAR";
 
+            modo = "excluirUsuario";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+            carregarGrid();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (modo == "novo")
+            //Salva novo Usuario
+            if (modo == "novoUsuario")
             {
                 try
                 {
@@ -170,9 +185,84 @@ namespace ProjetoLoja.UI
                 }
             }
 
-            modo = "";
-        }
+            //Altera Usuario existente
+            if (modo == "editarUsuario")
+            {
+                try
+                {
+                    //Método insere usuário na classe UsuarioBLL
+                    //Lê os textbox com os dados alterados
+                    UsuarioDTO usuario = new UsuarioDTO();
+                    usuario.IdUsuario = idUsuarioSelecionado;
+                    usuario.NomeUsuario = txtNomeUsuario.Text;
+                    usuario.EmailUsuario = txtEmailUsuario.Text;
+                    usuario.LoginUsuario = txtLoginUsuario.Text;
+                    usuario.SenhaUsuario = txtSenhaUsuario.Text;
+                    usuario.CadastroUsuario = System.DateTime.Now;
+                    if (cboSituacaoUsuario.Text == "Ativo")
+                    {
+                        usuario.SituacaoUsuario = "A";
+                    }
+                    else
+                    {
+                        usuario.SituacaoUsuario = "I";
+                    }
+                    switch (cboPerfilUsuario.Text)
+                    {
+                        case "Administrador":
+                            usuario.PerfilUsuario = 1;
+                            break;
+                        case "Operador":
+                            usuario.PerfilUsuario = 2;
+                            break;
+                        case "Gerencial":
+                            usuario.PerfilUsuario = 3;
+                            break;
+                    }
 
-       
+                    int usuarioEditado = new UsuarioBLL().editarUsuario(usuario);
+                    if (usuarioEditado > 0)
+                        MessageBox.Show("Alterado com Sucesso!");
+
+                    //Recarrega o grid
+                    carregarGrid();
+
+                    //Limpa os campos
+                    limparCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro Inesperado " + ex.Message);
+                }
+            }
+
+            if (modo == "excluirUsuario")
+            {
+                try
+                {
+
+                    UsuarioDTO usuario = new UsuarioDTO();
+                    usuario.IdUsuario = idUsuarioSelecionado;
+
+                    int usuarioDeletado = new UsuarioBLL().deletarUsuario(usuario);
+                    if (usuarioDeletado > 0)
+                    {
+                        MessageBox.Show("Deletado com Sucesso!");
+                    }
+
+                    //Recarrega o grid
+                    carregarGrid();
+
+                    //Limpa os campos
+                    limparCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro Inesperado " + ex.Message);
+                }
+            }
+
+            modo = "";
+        }       
     }
 }

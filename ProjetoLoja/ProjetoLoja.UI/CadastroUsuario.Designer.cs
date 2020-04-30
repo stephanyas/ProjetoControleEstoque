@@ -49,16 +49,17 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.lblMensagem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleCadastro)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 43);
+            this.label1.Font = new System.Drawing.Font("Broadway", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(150, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 28);
+            this.label1.Size = new System.Drawing.Size(308, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Usuário";
             // 
@@ -67,7 +68,7 @@
             this.lblNomeUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeUsuario.AutoSize = true;
             this.lblNomeUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeUsuario.Location = new System.Drawing.Point(41, 104);
+            this.lblNomeUsuario.Location = new System.Drawing.Point(41, 166);
             this.lblNomeUsuario.Name = "lblNomeUsuario";
             this.lblNomeUsuario.Size = new System.Drawing.Size(47, 17);
             this.lblNomeUsuario.TabIndex = 1;
@@ -78,7 +79,7 @@
             this.lblLoginUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLoginUsuario.AutoSize = true;
             this.lblLoginUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginUsuario.Location = new System.Drawing.Point(41, 178);
+            this.lblLoginUsuario.Location = new System.Drawing.Point(41, 240);
             this.lblLoginUsuario.Name = "lblLoginUsuario";
             this.lblLoginUsuario.Size = new System.Drawing.Size(43, 17);
             this.lblLoginUsuario.TabIndex = 2;
@@ -89,7 +90,7 @@
             this.lblEmailUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmailUsuario.AutoSize = true;
             this.lblEmailUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailUsuario.Location = new System.Drawing.Point(41, 142);
+            this.lblEmailUsuario.Location = new System.Drawing.Point(41, 204);
             this.lblEmailUsuario.Name = "lblEmailUsuario";
             this.lblEmailUsuario.Size = new System.Drawing.Size(46, 17);
             this.lblEmailUsuario.TabIndex = 3;
@@ -100,7 +101,7 @@
             this.lblSenhaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSenhaUsuario.AutoSize = true;
             this.lblSenhaUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaUsuario.Location = new System.Drawing.Point(41, 215);
+            this.lblSenhaUsuario.Location = new System.Drawing.Point(41, 277);
             this.lblSenhaUsuario.Name = "lblSenhaUsuario";
             this.lblSenhaUsuario.Size = new System.Drawing.Size(48, 17);
             this.lblSenhaUsuario.TabIndex = 4;
@@ -111,7 +112,7 @@
             this.lblCadastroUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCadastroUsuario.AutoSize = true;
             this.lblCadastroUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastroUsuario.Location = new System.Drawing.Point(41, 251);
+            this.lblCadastroUsuario.Location = new System.Drawing.Point(41, 313);
             this.lblCadastroUsuario.Name = "lblCadastroUsuario";
             this.lblCadastroUsuario.Size = new System.Drawing.Size(66, 17);
             this.lblCadastroUsuario.TabIndex = 5;
@@ -122,7 +123,7 @@
             this.lblSituacaoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSituacaoUsuario.AutoSize = true;
             this.lblSituacaoUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSituacaoUsuario.Location = new System.Drawing.Point(41, 289);
+            this.lblSituacaoUsuario.Location = new System.Drawing.Point(41, 351);
             this.lblSituacaoUsuario.Name = "lblSituacaoUsuario";
             this.lblSituacaoUsuario.Size = new System.Drawing.Size(65, 17);
             this.lblSituacaoUsuario.TabIndex = 6;
@@ -133,7 +134,7 @@
             this.lblPerfilUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPerfilUsuario.AutoSize = true;
             this.lblPerfilUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfilUsuario.Location = new System.Drawing.Point(283, 290);
+            this.lblPerfilUsuario.Location = new System.Drawing.Point(317, 353);
             this.lblPerfilUsuario.Name = "lblPerfilUsuario";
             this.lblPerfilUsuario.Size = new System.Drawing.Size(40, 17);
             this.lblPerfilUsuario.TabIndex = 7;
@@ -143,45 +144,46 @@
             // 
             this.txtNomeUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeUsuario.Location = new System.Drawing.Point(90, 101);
+            this.txtNomeUsuario.Location = new System.Drawing.Point(90, 163);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(411, 22);
+            this.txtNomeUsuario.Size = new System.Drawing.Size(481, 22);
             this.txtNomeUsuario.TabIndex = 8;
             // 
             // txtLoginUsuario
             // 
             this.txtLoginUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLoginUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginUsuario.Location = new System.Drawing.Point(86, 175);
+            this.txtLoginUsuario.Location = new System.Drawing.Point(86, 237);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
-            this.txtLoginUsuario.Size = new System.Drawing.Size(280, 22);
+            this.txtLoginUsuario.Size = new System.Drawing.Size(350, 22);
             this.txtLoginUsuario.TabIndex = 9;
             // 
             // txtEmailUsuario
             // 
             this.txtEmailUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailUsuario.Location = new System.Drawing.Point(89, 139);
+            this.txtEmailUsuario.Location = new System.Drawing.Point(89, 201);
             this.txtEmailUsuario.Name = "txtEmailUsuario";
-            this.txtEmailUsuario.Size = new System.Drawing.Size(412, 22);
+            this.txtEmailUsuario.Size = new System.Drawing.Size(482, 22);
             this.txtEmailUsuario.TabIndex = 10;
             // 
             // txtSenhaUsuario
             // 
             this.txtSenhaUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSenhaUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaUsuario.Location = new System.Drawing.Point(91, 212);
+            this.txtSenhaUsuario.Location = new System.Drawing.Point(91, 274);
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
-            this.txtSenhaUsuario.Size = new System.Drawing.Size(275, 22);
+            this.txtSenhaUsuario.Size = new System.Drawing.Size(345, 22);
             this.txtSenhaUsuario.TabIndex = 11;
+            this.txtSenhaUsuario.UseSystemPasswordChar = true;
             // 
             // txtCadastroUsuario
             // 
             this.txtCadastroUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCadastroUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadastroUsuario.Location = new System.Drawing.Point(109, 248);
+            this.txtCadastroUsuario.Location = new System.Drawing.Point(109, 310);
             this.txtCadastroUsuario.Name = "txtCadastroUsuario";
-            this.txtCadastroUsuario.Size = new System.Drawing.Size(259, 22);
+            this.txtCadastroUsuario.Size = new System.Drawing.Size(329, 22);
             this.txtCadastroUsuario.TabIndex = 12;
             // 
             // cboSituacaoUsuario
@@ -192,9 +194,9 @@
             "Administrador",
             "Operador",
             "Gerencial"});
-            this.cboSituacaoUsuario.Location = new System.Drawing.Point(109, 287);
+            this.cboSituacaoUsuario.Location = new System.Drawing.Point(109, 349);
             this.cboSituacaoUsuario.Name = "cboSituacaoUsuario";
-            this.cboSituacaoUsuario.Size = new System.Drawing.Size(160, 24);
+            this.cboSituacaoUsuario.Size = new System.Drawing.Size(172, 24);
             this.cboSituacaoUsuario.TabIndex = 13;
             // 
             // cboPerfilUsuario
@@ -204,9 +206,9 @@
             this.cboPerfilUsuario.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.cboPerfilUsuario.Location = new System.Drawing.Point(325, 287);
+            this.cboPerfilUsuario.Location = new System.Drawing.Point(359, 350);
             this.cboPerfilUsuario.Name = "cboPerfilUsuario";
-            this.cboPerfilUsuario.Size = new System.Drawing.Size(170, 24);
+            this.cboPerfilUsuario.Size = new System.Drawing.Size(193, 24);
             this.cboPerfilUsuario.TabIndex = 14;
             // 
             // dgvControleCadastro
@@ -214,11 +216,11 @@
             this.dgvControleCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvControleCadastro.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvControleCadastro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleCadastro.Location = new System.Drawing.Point(21, 343);
+            this.dgvControleCadastro.Location = new System.Drawing.Point(21, 413);
             this.dgvControleCadastro.Name = "dgvControleCadastro";
             this.dgvControleCadastro.ReadOnly = true;
             this.dgvControleCadastro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvControleCadastro.Size = new System.Drawing.Size(501, 150);
+            this.dgvControleCadastro.Size = new System.Drawing.Size(571, 150);
             this.dgvControleCadastro.TabIndex = 15;
             this.dgvControleCadastro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvControleCadastro_CellClick);
             // 
@@ -227,9 +229,9 @@
             this.btnNovo.BackColor = System.Drawing.Color.Thistle;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(16, 530);
+            this.btnNovo.Location = new System.Drawing.Point(45, 592);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(95, 35);
+            this.btnNovo.Size = new System.Drawing.Size(82, 35);
             this.btnNovo.TabIndex = 16;
             this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -240,9 +242,9 @@
             this.btnEditar.BackColor = System.Drawing.Color.Thistle;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(117, 530);
+            this.btnEditar.Location = new System.Drawing.Point(133, 592);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(95, 35);
+            this.btnEditar.Size = new System.Drawing.Size(82, 35);
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -253,9 +255,9 @@
             this.btnDeletar.BackColor = System.Drawing.Color.Thistle;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(218, 530);
+            this.btnDeletar.Location = new System.Drawing.Point(221, 592);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(95, 35);
+            this.btnDeletar.Size = new System.Drawing.Size(82, 35);
             this.btnDeletar.TabIndex = 18;
             this.btnDeletar.Text = "DELETAR";
             this.btnDeletar.UseVisualStyleBackColor = false;
@@ -266,25 +268,36 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Thistle;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(429, 530);
+            this.btnCancelar.Location = new System.Drawing.Point(397, 592);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(160, 35);
             this.btnCancelar.TabIndex = 19;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "CANCELAR / LIMPAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.Thistle;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(319, 530);
+            this.btnSalvar.Location = new System.Drawing.Point(309, 592);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(104, 35);
+            this.btnSalvar.Size = new System.Drawing.Size(82, 35);
             this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // lblMensagem
+            // 
+            this.lblMensagem.AutoSize = true;
+            this.lblMensagem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensagem.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMensagem.Location = new System.Drawing.Point(37, 104);
+            this.lblMensagem.Name = "lblMensagem";
+            this.lblMensagem.Size = new System.Drawing.Size(0, 18);
+            this.lblMensagem.TabIndex = 21;
             // 
             // CadastroUsuario
             // 
@@ -292,8 +305,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(544, 641);
+            this.ClientSize = new System.Drawing.Size(614, 712);
             this.ControlBox = false;
+            this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnDeletar);
@@ -355,5 +369,6 @@
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label lblMensagem;
     }
 }
